@@ -1,0 +1,295 @@
+$date
+	Thu May 16 19:39:43 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_mul $end
+$var wire 1 ! zero $end
+$var wire 1 " underflow $end
+$var wire 1 # overflow $end
+$var wire 32 $ out [31:0] $end
+$var wire 1 % nan $end
+$var wire 1 & done $end
+$var reg 1 ' clk $end
+$var reg 32 ( op1 [31:0] $end
+$var reg 32 ) op2 [31:0] $end
+$var reg 1 * rst_n $end
+$var reg 1 + start $end
+$scope module dut $end
+$var wire 1 ' clk $end
+$var wire 1 , is_inf1 $end
+$var wire 1 - is_inf2 $end
+$var wire 1 . is_inf_result $end
+$var wire 1 / is_nan1 $end
+$var wire 1 0 is_nan2 $end
+$var wire 1 1 is_nan_result $end
+$var wire 1 2 is_overflow_result $end
+$var wire 1 3 is_underflow_result $end
+$var wire 1 4 is_zero_result $end
+$var wire 32 5 op1 [31:0] $end
+$var wire 32 6 op2 [31:0] $end
+$var wire 1 * rst_n $end
+$var wire 1 7 sign_res $end
+$var wire 1 + start $end
+$var wire 1 8 sign2 $end
+$var wire 1 9 sign1 $end
+$var wire 2 : next_stage [1:0] $end
+$var wire 1 ; is_zero2 $end
+$var wire 1 < is_zero1 $end
+$var wire 25 = frac_res_after_rounding [24:0] $end
+$var wire 23 > frac_res [22:0] $end
+$var wire 24 ? frac2 [23:0] $end
+$var wire 24 @ frac1 [23:0] $end
+$var wire 8 A exp_res [7:0] $end
+$var wire 8 B exp2 [7:0] $end
+$var wire 8 C exp1 [7:0] $end
+$var parameter 36 D EXP_LSB $end
+$var parameter 33 E EXP_MAX $end
+$var parameter 34 F EXP_MSB $end
+$var parameter 33 G EXP_SHIFT $end
+$var parameter 32 H EXP_WIDTH $end
+$var parameter 32 I FLOAT_WIDTH $end
+$var parameter 37 J FRACTION_MSB $end
+$var parameter 32 K FRACTION_WIDTH $end
+$var parameter 33 L FULL_FRACTION_WIDTH $end
+$var parameter 64 M INF_VALUE $end
+$var parameter 32 N MAX_STAGE_REG $end
+$var parameter 64 O NAN_VALUE $end
+$var parameter 65 P PRODUCT_WIDTH $end
+$var parameter 33 Q SIGN_BIT $end
+$var parameter 32 R STAGE_REG_WIDTH $end
+$var reg 1 & done_reg $end
+$var reg 25 S frac_res_before_rounding_reg [24:0] $end
+$var reg 10 T full_exp_sum_after_correction_reg [9:0] $end
+$var reg 10 U full_exp_sum_reg [9:0] $end
+$var reg 48 V full_frac_reg [47:0] $end
+$var reg 1 % nan_reg $end
+$var reg 32 W out_reg [31:0] $end
+$var reg 1 # overflow_reg $end
+$var reg 2 X stage_reg [1:0] $end
+$var reg 1 " underflow_reg $end
+$var reg 1 ! zero_reg $end
+$scope begin aux_outs $end
+$upscope $end
+$scope begin done_out $end
+$upscope $end
+$scope begin result_out $end
+$upscope $end
+$scope begin stage_inc $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 R
+b11111 Q
+b110000 P
+b11111111110000000000000000000000 O
+b10 N
+b1111111100000000000000000000000 M
+b11010 L
+b10111 K
+b10110 J
+b100000 I
+b1000 H
+b1111111 G
+b11110 F
+b11111111 E
+b10111 D
+$end
+#0
+$dumpvars
+b0 X
+b0 W
+bx V
+bx U
+bx T
+bx S
+bx C
+bx B
+bx A
+b1xxxxxxxxxxxxxxxxxxxxxxx @
+b1xxxxxxxxxxxxxxxxxxxxxxx ?
+bx >
+bx =
+x<
+x;
+b1 :
+x9
+x8
+x7
+bx 6
+bx 5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+0*
+bx )
+bx (
+0'
+0&
+0%
+b0 $
+0#
+0"
+0!
+$end
+#10
+1'
+#20
+01
+00
+0-
+07
+0/
+0,
+b10000001 B
+b101000000000000000000000 ?
+08
+0;
+b10000001 C
+b101000000000000000000000 @
+09
+0<
+1+
+b1000000101000000000000000000000 )
+b1000000101000000000000000000000 6
+b1000000101000000000000000000000 (
+b1000000101000000000000000000000 5
+0'
+#30
+1'
+#40
+1*
+0+
+0'
+#50
+b10 :
+b1 X
+b11001000000000000000000000000000000000000000000 V
+b10000011 U
+1'
+#60
+0'
+#70
+04
+03
+02
+0.
+b10010000000000000000000 >
+b10000011 A
+b11 :
+b10 X
+b1100100000000000000000001 =
+b1100100000000000000000000 S
+b10000011 T
+1'
+#80
+0'
+#90
+1&
+b1000001110010000000000000000000 $
+b1000001110010000000000000000000 W
+1'
+#100
+0'
+#110
+1'
+#120
+0'
+#130
+1'
+#140
+0'
+#150
+1'
+#160
+0'
+#170
+1'
+#180
+0'
+#190
+1'
+#200
+0'
+#210
+1'
+#220
+0'
+#230
+1'
+#240
+0'
+#250
+1'
+#260
+0'
+#270
+1'
+#280
+0'
+#290
+1'
+#300
+0'
+#310
+1'
+#320
+0'
+#330
+1'
+#340
+0'
+#350
+1'
+#360
+0'
+#370
+1'
+#380
+0'
+#390
+1'
+#400
+0'
+#410
+1'
+#420
+0'
+#430
+1'
+#440
+0'
+#450
+1'
+#460
+0'
+#470
+1'
+#480
+0'
+#490
+1'
+#500
+0'
+#510
+1'
+#520
+0'
+#530
+1'
+#540
+0'
