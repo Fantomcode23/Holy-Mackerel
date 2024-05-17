@@ -4,8 +4,8 @@
 
 `include "add_float.v"
 
-// TODO : check valid index
-`define IDX(i,j,h,w) (((h)*(w)-1) - ((i)*(w)+j)) // indexed somewhat unconventionally
+
+`define IDX(i,j,h,w) (((h)*(w)-1) - ((i)*(w)+j))
 `define ELEM(m,i,j,h,w,s) m[s*(1+`IDX(i,j,h,w))-1:s*`IDX(i,j,h,w)]
 
 
@@ -14,19 +14,18 @@
 `define S_ADD (2'b10)
 
 module accumulate
-// accumulate elements of I and put it into O
-//X =  splitting line for recursive accumulation
+
 #(parameter S=32, C=2, X=2**($clog2(C)-1))
 (
 	input rst_n,
 	input clk,
 	input start,
-	input [S*C-1:0] I, // input array
-	output [S-1:0] O, // 1 floating point number
+	input [S*C-1:0] I,
+	output [S-1:0] O, 
 	output done
 );
 
-reg [1:0] stage = 0; //accum --> add
+reg [1:0] stage = 0; 
 wire add_start = (stage == 1);
 wire add_rst_n = (stage == 2);
 
@@ -39,13 +38,13 @@ end
 always @(posedge clk) begin
 	case(stage)
 		0: begin
-			// accum left, right
+			
 			if(done_l && done_r) begin
 				stage <= stage+1;
 			end
 		end
 		1: begin
-			// add-start
+			
 			stage <= stage+1;
 		end
 		2: begin
