@@ -1,2 +1,2 @@
 # Analog-Inference-Chip
-## A Novel gate-level architecture for neural network implementation for real time inference.
+## A novel gate-level/chip-level architecture of neural network implementations for real time inference.
