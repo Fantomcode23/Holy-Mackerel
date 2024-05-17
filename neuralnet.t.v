@@ -49,16 +49,16 @@ always @(posedge done) begin
 end
 
 initial begin
-	$dumpfile("net.vcd");
+	$dumpfile("neuralnet.vcd");
 	$dumpvars(0, test_net);
 	#500;
-	test_xor(zero,zero); // --> 0
+	test_xor(zero,zero); 
 	#500;
-	test_xor(zero,one); // --> 1
+	test_xor(zero,one); 
 	#500;
-	test_xor(one,zero); // --> 1
+	test_xor(one,zero); 
 	#500;
-	test_xor(one,one); // --> 0
+	test_xor(one,one); 
 	#500;
 	$finish;
 end
